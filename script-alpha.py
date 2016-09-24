@@ -10,7 +10,7 @@ init = 1
 blog_dir = 1
 
 # Main console
-print "Middleman Helper v0.2-alpha".center(60, ' ')
+print "Middleman Helper v0.2.1-alpha".center(60, ' ')
 print "by Ned Palacios".center(60,' ')
 print "https://github.com/nedpals/middleman-helper".center(60,' ')
 print " "
@@ -36,7 +36,7 @@ while init == 1:
         savefile = os.path.join(savedir, filename)
         with open(savefile, "w+") as file:
             file.write("---\n")
-            file.write("# File created using Middleman Helper")
+            file.write("# File created using Middleman Helper\n")
             file.write("title: " + a_title + "\n")
             file.write("date: " + today + "\n")
             file.write("tags: \n")
@@ -46,7 +46,7 @@ while init == 1:
         print 'Creating "%s"...' % filename
         print 'Done.'
     elif cmd == "exit" or cmd == "x":
-        die()
+        exit()
     else:
         print "'%s' command not found" % cmd
     
